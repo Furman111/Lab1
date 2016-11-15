@@ -10,7 +10,7 @@ public class Lab1 {
         MenuItem c = new MenuItem("Удалить задачу");
         MenuItem d = new MenuItem("Вывести журнал задач");
         MenuItem e = new MenuItem("Выйти из программы");
-        a.addItem(b,0);
+
         a.addItem(c,1);
         a.addItem(d,2);
         a.addItem(e,3);
