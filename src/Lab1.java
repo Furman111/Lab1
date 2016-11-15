@@ -11,9 +11,6 @@ public class Lab1 {
         MenuItem d = new MenuItem("Вывести журнал задач");
         MenuItem e = new MenuItem("Выйти из программы");
 
-        a.addItem(c,1);
-        a.addItem(d,2);
-        a.addItem(e,3);
         InterFace i = new InterFace(a);
         i.showMenu();
         while (i.getPush() != 4)
