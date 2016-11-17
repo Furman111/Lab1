@@ -6,26 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10f46164-8604-4955-a636-fe2c1b45fb5e" name="Default" comment="AddedJournalLoader">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MenuComponent.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Lab1/InterFace.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/InterFace.java" afterPath="$PROJECT_DIR$/src/View.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Journal.jr" afterPath="$PROJECT_DIR$/Journal.jr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/AddTaskAction.class" afterPath="$PROJECT_DIR$/out/production/Lab1/AddTaskAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/DeleteTaskAction.class" afterPath="$PROJECT_DIR$/out/production/Lab1/DeleteTaskAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/ExitAction.class" afterPath="$PROJECT_DIR$/out/production/Lab1/ExitAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/Journal.class" afterPath="$PROJECT_DIR$/out/production/Lab1/Journal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/Lab1.class" afterPath="$PROJECT_DIR$/out/production/Lab1/Lab1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/Menu.class" afterPath="$PROJECT_DIR$/out/production/Lab1/Menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Lab1/MenuItem.class" afterPath="$PROJECT_DIR$/out/production/Lab1/MenuItem.class" />
+    <list default="true" id="10f46164-8604-4955-a636-fe2c1b45fb5e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Action.java" afterPath="$PROJECT_DIR$/src/Action.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ExitAction.java" afterPath="$PROJECT_DIR$/src/ExitAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Journal.java" afterPath="$PROJECT_DIR$/src/Journal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/JournalLoader.java" afterPath="$PROJECT_DIR$/src/JournalLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Lab1.java" afterPath="$PROJECT_DIR$/src/Lab1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Menu.java" afterPath="$PROJECT_DIR$/src/Menu.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MenuItem.java" afterPath="$PROJECT_DIR$/src/MenuItem.java" />
     </list>
     <ignored path="Lab1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/src/Lab1.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="48" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -116,8 +98,8 @@
       <file leaf-file-name="MenuItem.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MenuItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="102">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding>
                 <element signature="e#312#313#0" expanded="true" />
                 <element signature="e#339#340#0" expanded="true" />
@@ -761,7 +743,7 @@
       <workItem from="1478974141829" duration="67000" />
       <workItem from="1479197823004" duration="5270000" />
       <workItem from="1479246452275" duration="20696000" />
-      <workItem from="1479400635940" duration="3897000" />
+      <workItem from="1479400635940" duration="4105000" />
     </task>
     <task id="LOCAL-00001" summary="First">
       <created>1479247098744</created>
@@ -784,11 +766,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479387383115</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="v3">
+      <created>1479404576865</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479404576865</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47653000" />
+    <option name="totallyTimeSpent" value="47861000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="726" extended-state="0" />
@@ -885,7 +874,8 @@
     <MESSAGE value="First" />
     <MESSAGE value="Added" />
     <MESSAGE value="AddedJournalLoader" />
-    <option name="LAST_COMMIT_MESSAGE" value="AddedJournalLoader" />
+    <MESSAGE value="v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="v3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1357,7 +1347,7 @@
     <entry file="file://$PROJECT_DIR$/src/Lab1.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1391,8 +1381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MenuItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="102">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="e#312#313#0" expanded="true" />
             <element signature="e#339#340#0" expanded="true" />
