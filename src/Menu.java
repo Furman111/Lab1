@@ -1,49 +1,65 @@
+import javax.swing.text.html.HTMLDocument;
+import java.util.ArrayList;
+import java.util.Iterator;
+
 /**
  * Created by FurmanT on 10.11.2016.
  */
-public class Menu {
-    private MenuItem menuItems[];
+public class Menu extends MenuComponent{
+    private ArrayList<MenuComponent> menuItems;
+    private String name;
 
-    public Menu(MenuItem[] menuItems1){
-        menuItems = menuItems1;
-    }
+    public static class Builder{
+        private ArrayList<MenuComponent> items;
+        private String name;
 
-    public Menu(){}
-
-    public MenuItem[] getAllItems(){
-        return menuItems;
-    }
-
-    public int getNumberOfItems(){
-        return menuItems.length;
-    }
-
-    public MenuItem getItem(int number){
-        return menuItems[number];
-    }
-
-    public void addItem(MenuItem menuItem,int num){
-        if (menuItems!=null) {
-            MenuItem[] t = new MenuItem[menuItems.length + 1];
-            for (int i = 0; i < num; i++)
-                t[i] = menuItems[i];
-            t[num] = menuItem;
-            for (int i = num + 1; i < menuItems.length + 1; i++) {
-                t[i] = menuItems[i - 1];
-            }
-            menuItems = t;
+        public Builder(String name){
+            this.name = name;
+            this.items = new ArrayList<>();
         }
-        else
-            menuItems =new MenuItem[] {menuItem};
+
+        public Builder addItem(MenuComponent item){
+            this.items.add(item);
+            return this;
+        }
+
+        public Menu build(){
+            return new Menu(this);
+        }
     }
 
-    public void deleteItem(int num){
-        MenuItem[] t = new MenuItem[menuItems.length-1];
-        for (int i=0;i<num;i++)
-            t[i] = menuItems[i];
-        for(int i=num;i<menuItems.length-1;i++)
-            t[i]=menuItems[i+1];
-        menuItems = t;
+    public Menu(Builder builder){
+        name = builder.name;
+        menuItems = builder.items;
+    }
+
+    @Override
+    public String getName(){
+        return this.name;
+    }
+
+    @Override
+    public int getSize(){
+        return menuItems.size();
+    }
+
+    @Override
+    public MenuComponent getChild(int number){
+        return menuItems.get(number);
+    }
+
+    @Override
+    public void add(MenuComponent menuItem,int num){
+        menuItems.add(num,menuItem);
+    }
+
+    @Override
+    public void remove(int num){
+        menuItems.remove(num);
+    }
+
+    public Iterator iterator(){
+        return menuItems.iterator();
     }
 
 }

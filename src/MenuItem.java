@@ -1,7 +1,9 @@
+import java.util.Iterator;
+
 /**
  * Created by FurmanT on 10.11.2016.
  */
-public class MenuItem {
+public class MenuItem extends MenuComponent{
     private String name;
     private Action action;
 
@@ -10,19 +12,35 @@ public class MenuItem {
         action = act;
     }
 
-    public MenuItem(String a){
-        name = a;
-    }
-
-    public void setName(String name){
-        this.name = name;
-    }
-
+    @Override
     public String getName(){
         return name;
     }
 
+    @Override
     public void getAction(){
         action.execute();
     }
+
+    @Override
+    public Iterator iterator(){
+        return new NullIterator();
+    }
+
+    public class NullIterator implements Iterator{
+
+        public boolean hasNext(){
+            return false;
+        }
+
+        public Object next(){
+            return null;
+        }
+
+        public void remove(){
+            throw new UnsupportedOperationException();
+        }
+
+    }
+
 }
