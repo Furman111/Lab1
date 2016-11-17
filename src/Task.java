@@ -1,9 +1,10 @@
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by FurmanT on 10.11.2016.
  */
-public class Task {
+public class Task implements Serializable{
     String name;
     Date date;
     String description;

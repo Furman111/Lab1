@@ -1,19 +1,18 @@
-import java.io.IOException;
+import java.io.*;
+import java.util.Date;
 
 /**
  * Created by FurmanT on 10.11.2016.
  */
 public class Lab1 {
-    public static void main(String[] args){
-        Menu menu = new Menu();
-        MenuItem item = new MenuItem("Добавить задачу");
-        MenuItem c = new MenuItem("Удалить задачу");
-        MenuItem d = new MenuItem("Вывести журнал задач");
-        MenuItem e = new MenuItem("Выйти из программы");
+    public static void main(String[] args) {
+        JournalLoader load = new JournalLoader();
+        try {
+            System.out.println(load.loadJournal().getTask(Long.valueOf(24)).getDescription());
+            load.saveJournal();
 
-        InterFace i = new InterFace(a);
-        i.showMenu();
-        while (i.getPush() != 4)
-            i.showMenu();
+        } catch (Exception e) {
+            System.out.println("Err");
+        }
     }
 }

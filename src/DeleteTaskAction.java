@@ -2,8 +2,8 @@
  * Created by FurmanT on 10.11.2016.
  */
 public class DeleteTaskAction implements Action {
-    Journal journal;
-    int num;
+    private Journal journal;
+    private int num;
 
     public DeleteTaskAction(Journal j,int number){
         journal = j;
@@ -11,6 +11,6 @@ public class DeleteTaskAction implements Action {
     }
 
     public void execute(){
-        journal.deleteTask(num);
+
     }
 }
