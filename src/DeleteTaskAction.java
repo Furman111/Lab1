@@ -5,7 +5,7 @@ public class DeleteTaskAction implements Action {
     private Journal journal;
     private int num;
 
-    public DeleteTaskAction(Journal j,int number){
+    public DeleteTaskAction(Journal j, int number){
         journal = j;
         num = number;
     }

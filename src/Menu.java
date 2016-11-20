@@ -48,8 +48,7 @@ public class Menu extends MenuComponent{
         return menuItems.get(number);
     }
 
-    @Override
-    public void add(MenuComponent menuItem,int num){
+    public void add(MenuComponent menuItem, int num){
         menuItems.add(num,menuItem);
     }
 

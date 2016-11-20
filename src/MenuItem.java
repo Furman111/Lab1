@@ -3,6 +3,7 @@ import java.util.Iterator;
 /**
  * Created by FurmanT on 10.11.2016.
  */
+
 public class MenuItem extends MenuComponent{
     private String name;
     private Action action;
