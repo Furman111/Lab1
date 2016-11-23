@@ -1,39 +1,41 @@
 import java.io.Serializable;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by FurmanT on 10.11.2016.
  */
 public class Journal implements Serializable,Iterable<Task> {
-    private Map<Long, Task> tasks;
+    private List<Task> tasks;
 
     public Journal(){
-        tasks = new HashMap<>();
+        tasks = new ArrayList<>();
     }
 
-    public Map<Long, Task> getAllTasks() {
+    public List<Task> getAllTasks() {
         return tasks;
     }
 
-    public void addTask(Long key, Task task){
-        tasks.put(key,task);
+    public void addTask(int index,Task task){
+        tasks.add(index,task);
     }
 
-    public void deleteTask(Long key){
-        tasks.remove(key);
+    public void deleteTask(int index){
+        tasks.remove(index);
     }
 
-    public void setTask(Long key, Task task){
-        tasks.put(key,task);
+    public void setTask(int index, Task task){
+        tasks.set(index,task);
     }
 
-    public Task getTask(Long key){
-        return tasks.get(key);
+    public Task getTask(int index){
+        return tasks.get(index);
+    }
+
+    public int size(){
+        return tasks.size();
     }
 
     public Iterator iterator(){
-        return tasks.values().iterator();
+        return tasks.iterator();
     }
 }

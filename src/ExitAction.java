@@ -2,19 +2,20 @@
  * Created by FurmanT on 10.11.2016.
  */
 public class ExitAction implements Action {
-    private Journal journal;
 
-    ExitAction(Journal j){
-        journal = j;
+    ExitAction(){
     }
 
     public void execute(){
-        try {
-           JournalLoader.getInstance().saveJournal();
+        if (DataManager.getPath() == null) {
+            System.out.println("Для корректного завершения работы необходимо ввести путь до файла, в котором будут сохранены текущие данные.");
+            DataManager.saveJournal(View.getPath());
+            System.exit(0);
         }
-        catch(Exception e){
-            View.throwException(e);
+        else
+        {
+            DataManager.saveJournal(DataManager.getPath());
+            System.exit(0);
         }
-        System.exit(0);
     }
 }
