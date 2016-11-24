@@ -22,7 +22,7 @@ public class AddTaskAction implements Action {
         while(er){
             try {
                 er = false;
-                int res = in.nextInt();
+                int res = Integer.valueOf(in.nextLine());
                 if (res==2) return;
                 if (res!=1) er = true;
             }

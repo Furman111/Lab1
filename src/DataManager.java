@@ -26,7 +26,7 @@ public enum DataManager {
             while (er) {
                 try {
                     er = false;
-                    int res = in.nextInt();
+                    int res = Integer.valueOf(in.nextLine());
                     if (res == 2) {
                         journal = new Journal();
                         path = null;
@@ -50,7 +50,7 @@ public enum DataManager {
             while (er) {
                 try {
                     er = false;
-                    int res = in.nextInt();
+                    int res = Integer.valueOf(in.nextLine());
                     if (res == 2) {
                         journal = new Journal();
                         path = null;
@@ -74,7 +74,7 @@ public enum DataManager {
             while (er) {
                 try {
                     er = false;
-                    int res = in.nextInt();
+                    int res = Integer.valueOf(in.nextLine());
                     if (res == 2) {
                         journal = new Journal();
                         path = null;
@@ -103,7 +103,7 @@ public enum DataManager {
         while (er) {
             try {
                 er = false;
-                int res = in.nextInt();
+                int res = Integer.valueOf(in.nextLine());
                 if (res == 2) {
                     journal = new Journal();
                     path = null;
@@ -140,7 +140,7 @@ public enum DataManager {
             while (er) {
                 try {
                     er = false;
-                    int res = in.nextInt();
+                    int res = Integer.valueOf(in.nextLine());
                     if (res == 2) System.exit(666);
                     if (res != 1) er = true;
                 } catch (Exception exc) {
