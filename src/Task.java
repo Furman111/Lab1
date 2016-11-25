@@ -5,9 +5,9 @@ import java.util.Calendar;
  * Created by FurmanT on 10.11.2016.
  */
 public class Task implements Serializable{
-    String name;
-    Calendar date;
-    String description;
+    private String name;
+    private Calendar date;
+    private String description;
 
     Task(Task task){
         name = task.getName();
@@ -35,4 +35,7 @@ public class Task implements Serializable{
     public Calendar getDate(){return date;}
     public String getDescription(){return description;}
 
+    public int hashCode(){
+        return name.hashCode()^date.hashCode()^description.hashCode();
+    }
 }

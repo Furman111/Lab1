@@ -74,6 +74,7 @@ public enum TaskEditor {
             if ((hours < 1) || (hours > 23)) return false;
             minutes = Integer.valueOf(stringTokenizer.nextToken());
             if ((minutes < 0) || (minutes > 59)) return false;
+            if ((new GregorianCalendar(year,month,day,hours,minutes).getTime().getTime())<=Calendar.getInstance().getTime().getTime()) return false;
             return true;
         } catch (Exception e) {
             return false;

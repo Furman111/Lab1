@@ -38,4 +38,16 @@ public class Journal implements Serializable,Iterable<Task> {
     public Iterator iterator(){
         return tasks.iterator();
     }
+
+    public void delete(Task task){
+            tasks.remove(task);
+    }
+
+    public int hashCode(){
+        int res = Integer.MAX_VALUE;
+        for(Task task: tasks)
+            res ^=task.hashCode();
+        return res;
+    }
+
 }

@@ -85,4 +85,8 @@ public enum View {
         return path;
     }
 
+    public static void alertAboutTask(Task task){
+        System.out.println("*****  Событие "+task.getName()+" наступило!  *****");
+    }
+
 }
