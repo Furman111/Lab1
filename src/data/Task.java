@@ -1,3 +1,5 @@
+package data;
+
 import java.io.Serializable;
 import java.util.Calendar;
 
@@ -9,13 +11,13 @@ public class Task implements Serializable{
     private Calendar date;
     private String description;
 
-    Task(Task task){
+    public Task(Task task){
         name = task.getName();
         date = task.getDate();
         description = task.getDescription();
     }
 
-    Task(String name,Calendar data, String dscr){
+    public Task(String name,Calendar data, String dscr){
         this.name = name;
         this.date = data;
         this.description = dscr;
@@ -35,7 +37,32 @@ public class Task implements Serializable{
     public Calendar getDate(){return date;}
     public String getDescription(){return description;}
 
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Task)) return false;
+
+        Task task = (Task) o;
+
+        if (name != null ? !name.equals(task.name) : task.name != null) return false;
+        if (date != null ? !date.equals(task.date) : task.date != null) return false;
+        return description != null ? description.equals(task.description) : task.description == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = name != null ? name.hashCode() : 0;
+        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (description != null ? description.hashCode() : 0);
+        return result;
+    }
+
+    /*
     public int hashCode(){
         return name.hashCode()^date.hashCode()^description.hashCode();
     }
+*/
 }

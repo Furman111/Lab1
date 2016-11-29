@@ -1,3 +1,8 @@
+package actions;
+
+import data.*;
+import userInterface.*;
+import validation.TaskEditor;
 import java.util.Calendar;
 import java.util.Scanner;
 
@@ -33,7 +38,7 @@ public class EditTaskAction implements Action {
             }
             while (true) {
                 int command = -1;
-                View.showTask(journal.getTask(ind));
+                ConsoleView.showTask(journal.getTask(ind));
                 System.out.println();
                 System.out.println("Для редактирования определённой части задачи введите соответствующую цифру:" +
                         "\n1 - Имя задачи\n2 - Описание задачи\n3 - Дата и время задачи\n4 - Выбрать другую задачу для редактирования\n\nДля возврата в главное меню нажмите Enter");

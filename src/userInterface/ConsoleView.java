@@ -1,3 +1,7 @@
+package userInterface;
+
+import menu.*;
+import data.*;
 
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
@@ -7,7 +11,7 @@ import java.util.Scanner;
  */
 
 
-public enum View {
+public enum ConsoleView {
     ;
     static int num;
 

@@ -1,3 +1,8 @@
+package dataExchange;
+
+import data.Journal;
+import userInterface.ConsoleView;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -38,7 +43,7 @@ public enum DataManager {
                     er = true;
                 }
             }
-            journal = loadJournal(View.getPath());
+            journal = loadJournal(ConsoleView.getPath());
         } catch (IOException e) {
             System.out.println("Ошибка при чтении журнала из файла!");
             System.out.println();
@@ -62,7 +67,7 @@ public enum DataManager {
                     er = true;
                 }
             }
-            journal = loadJournal(View.getPath());
+            journal = loadJournal(ConsoleView.getPath());
         } catch (ClassNotFoundException e) {
             System.out.println("В указанном файле отсутствуют необходимые данные!");
             System.out.println();
@@ -87,7 +92,7 @@ public enum DataManager {
                 }
             }
 
-            journal = loadJournal(View.getPath());
+            journal = loadJournal(ConsoleView.getPath());
         }
         path = path1;
         return journal;
@@ -110,7 +115,7 @@ public enum DataManager {
                 } else
                     if (res == 3) System.exit(0);
                     else
-                        if (res == 1) journal = loadJournal(View.getPath());
+                        if (res == 1) journal = loadJournal(ConsoleView.getPath());
                         else
                             er = true;
             } catch (Exception exc) {
@@ -122,7 +127,7 @@ public enum DataManager {
 
     public static Journal getJournal() {
         if (journal == null)
-            return loadJournal(View.getPath());
+            return loadJournal(ConsoleView.getPath());
         else
             return journal;
     }
@@ -147,7 +152,7 @@ public enum DataManager {
                     er = true;
                 }
             }
-            saveJournal(View.getPath());
+            saveJournal(ConsoleView.getPath());
         }
     }
 

@@ -1,3 +1,5 @@
+package menu;
+
 /**
  * Created by FurmanT on 17.11.2016.
  */

@@ -1,9 +1,13 @@
+package menu;
+
+import actions.*;
+import data.Journal;
+
 /**
  * Created by FurmanT on 17.11.2016.
  */
 public class MenuCreator {
     private Journal journal;
-    private DataManager dataManager;
 
     public MenuCreator(Journal journal) {
         this.journal = journal;

@@ -1,7 +1,10 @@
+package actions;
+
 import java.io.IOException;
 import java.util.Calendar;
 import java.util.Scanner;
-
+import data.*;
+import userInterface.*;
 /**
  * Created by FurmanT on 10.11.2016.
  */
@@ -33,7 +36,7 @@ public class ShowJournalAction implements Action {
                 else
                     System.out.println("Введен несуществующий номер задачи, повторите ввод:");
             }
-            View.showTask(journal.getTask(ind));
+            ConsoleView.showTask(journal.getTask(ind));
             System.out.println("Для продолжения работы нажмите Enter");
             try{
                 System.in.read();

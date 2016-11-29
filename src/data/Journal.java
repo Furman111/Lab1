@@ -1,3 +1,5 @@
+package data;
+
 import java.io.Serializable;
 import java.util.*;
 
@@ -12,7 +14,7 @@ public class Journal implements Serializable,Iterable<Task> {
     }
 
     public List<Task> getAllTasks() {
-        return tasks;
+        return new ArrayList<> (tasks);
     }
 
     public void addTask(int index,Task task){
@@ -43,11 +45,21 @@ public class Journal implements Serializable,Iterable<Task> {
             tasks.remove(task);
     }
 
-    public int hashCode(){
-        int res = Integer.MAX_VALUE;
-        for(Task task: tasks)
-            res ^=task.hashCode();
-        return res;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Journal)) return false;
+
+        Journal tasks1 = (Journal) o;
+
+        return tasks.equals(tasks1.tasks);
+
     }
+
+    @Override
+    public int hashCode() {
+        return tasks != null ? tasks.hashCode() : 0;
+    }
+
 
 }

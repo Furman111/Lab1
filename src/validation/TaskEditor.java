@@ -1,3 +1,5 @@
+package validation;
+
 import java.time.Year;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
@@ -71,7 +73,7 @@ public enum TaskEditor {
                     break;
             }
             hours = Integer.valueOf(stringTokenizer.nextToken());
-            if ((hours < 1) || (hours > 23)) return false;
+            if ((hours < 0) || (hours > 23)) return false;
             minutes = Integer.valueOf(stringTokenizer.nextToken());
             if ((minutes < 0) || (minutes > 59)) return false;
             if ((new GregorianCalendar(year,month,day,hours,minutes).getTime().getTime())<=Calendar.getInstance().getTime().getTime()) return false;

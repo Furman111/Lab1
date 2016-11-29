@@ -1,3 +1,10 @@
+import data.Journal;
+import dataExchange.DataManager;
+import menu.MenuComponent;
+import menu.MenuCreator;
+import tracking.Event;
+import userInterface.ConsoleView;
+
 /**
  * Created by FurmanT on 10.11.2016.
  */
@@ -9,6 +16,6 @@ public class Lab1 {
         event.start();
         MenuCreator menuCreator = new MenuCreator(journal);
         MenuComponent menu = menuCreator.getMenu();
-        View.showMenu(menu);
+        ConsoleView.showMenu(menu);
     }
 }

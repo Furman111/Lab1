@@ -1,4 +1,7 @@
+package actions;
+
 import java.util.Scanner;
+import data.*;
 
 /**
  * Created by FurmanT on 10.11.2016.
