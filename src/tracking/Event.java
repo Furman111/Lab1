@@ -3,7 +3,7 @@ package tracking;
 import data.*;
 
 import java.util.*;
-import userInterface.*;
+import ui.*;
 
 
 /**
@@ -36,12 +36,10 @@ public class Event implements Runnable {
     public void run() {
         while (true) {
             sort(journal.hashCode());
-            if (!copyTasks.isEmpty()) {
-                if (Calendar.getInstance().getTime().after(copyTasks.get(0).getDate().getTime())) {
+            if (!copyTasks.isEmpty() && Calendar.getInstance().getTime().after(copyTasks.get(0).getDate().getTime())) {
                     alert(copyTasks.get(0));
                     journal.delete(copyTasks.get(0));
                     copyTasks.remove(0);
-                }
             }
         }
     }

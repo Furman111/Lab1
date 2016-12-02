@@ -1,4 +1,4 @@
-package userInterface;
+package ui;
 
 import menu.*;
 import data.*;
@@ -15,26 +15,26 @@ public enum ConsoleView {
     ;
     static int num;
 
-    public static void showMenu(MenuComponent menu) {
-        if (menu instanceof Menu) {
+    public static void showMenu(MenuComponent menucomponent) {
+        if (menucomponent instanceof Menu) {
             num++;
             boolean back = false;
             while (true) {
                 System.out.println();
-                System.out.println(menu.getName());
+                System.out.println(menucomponent.getName());
                 System.out.println();
                 int i = 1;
-                for (MenuComponent m : menu) {
+                for (MenuComponent m : menucomponent) {
                     System.out.println(i++ + " - " + m.getName());
                 }
                 if (num > 1) System.out.println(i + " - Вернуться в предыдущее меню");
                 while (true) {
                     i = getCommand() - 1;
-                    if ((i >= 0) && (i < menu.getSize())) {
-                        showMenu(menu.getChild(i));
+                    if (i >= 0 && i < menucomponent.getSize()) {
+                        showMenu(menucomponent.getChild(i));
                         break;
                     }
-                    if ((i == menu.getSize()) && (num > 1)) {
+                    if (i == menucomponent.getSize() && num > 1) {
                         back = true;
                         break;
                     }
@@ -46,8 +46,8 @@ public enum ConsoleView {
                 }
             }
         }
-        if (menu instanceof MenuItem) {
-            menu.getAction();
+        if (menucomponent instanceof MenuItem) {
+            menucomponent.getAction();
         }
     }
 

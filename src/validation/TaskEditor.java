@@ -1,9 +1,7 @@
 package validation;
 
-import java.time.Year;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 /**
@@ -27,7 +25,7 @@ public enum TaskEditor {
             month = Integer.valueOf(stringTokenizer.nextToken());
             year = Integer.valueOf(stringTokenizer.nextToken());
             if (year < Calendar.getInstance().get(Calendar.YEAR)) return false;
-            if ((month > 12) && (month < 1)) return false;
+            if (month > 12 && month < 1) return false;
             if (day < 1) return false;
             switch (month) {
                 case 1:
@@ -73,9 +71,9 @@ public enum TaskEditor {
                     break;
             }
             hours = Integer.valueOf(stringTokenizer.nextToken());
-            if ((hours < 0) || (hours > 23)) return false;
+            if (hours < 0 || hours > 23) return false;
             minutes = Integer.valueOf(stringTokenizer.nextToken());
-            if ((minutes < 0) || (minutes > 59)) return false;
+            if (minutes < 0 || minutes > 59) return false;
             if ((new GregorianCalendar(year,month,day,hours,minutes).getTime().getTime())<=Calendar.getInstance().getTime().getTime()) return false;
             return true;
         } catch (Exception e) {

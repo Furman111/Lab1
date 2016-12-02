@@ -3,7 +3,7 @@ import dataExchange.DataManager;
 import menu.MenuComponent;
 import menu.MenuCreator;
 import tracking.Event;
-import userInterface.ConsoleView;
+import ui.ConsoleView;
 
 /**
  * Created by FurmanT on 10.11.2016.

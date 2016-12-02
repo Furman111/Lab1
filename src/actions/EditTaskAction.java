@@ -1,7 +1,7 @@
 package actions;
 
 import data.*;
-import userInterface.*;
+import ui.*;
 import validation.TaskEditor;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -31,7 +31,7 @@ public class EditTaskAction implements Action {
                 } catch (Exception e) {
                     System.out.println("Некорректный ввод, введите заново:");
                 }
-                if ((ind >= 0) && (ind < journal.size()))
+                if (ind >= 0 && ind < journal.size())
                     break;
                 else
                     System.out.println("Введен несуществующий номер задачи, повторите ввод:");
@@ -50,7 +50,7 @@ public class EditTaskAction implements Action {
                     } catch (Exception e) {
                         System.out.println("Некорректный ввод, введите заново:");
                     }
-                    if ((command > 0) && (command < 5))
+                    if (command > 0 && command < 5)
                         break;
                     else
                         System.out.println("Введена несуществующая команда, повторите ввод:");

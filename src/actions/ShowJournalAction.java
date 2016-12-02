@@ -1,10 +1,8 @@
 package actions;
 
-import java.io.IOException;
-import java.util.Calendar;
 import java.util.Scanner;
 import data.*;
-import userInterface.*;
+import ui.*;
 /**
  * Created by FurmanT on 10.11.2016.
  */
@@ -31,7 +29,7 @@ public class ShowJournalAction implements Action {
                 } catch (Exception e) {
                     System.out.println("Некорректный ввод, введите заново:");
                 }
-                if ((ind >= 0) && (ind < journal.size()))
+                if (ind >= 0 && ind < journal.size())
                     break;
                 else
                     System.out.println("Введен несуществующий номер задачи, повторите ввод:");

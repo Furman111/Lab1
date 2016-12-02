@@ -27,7 +27,7 @@ public class DeleteTaskAction implements Action {
                     ind = Integer.valueOf(res) - 1;
                 } catch (Exception e) {
                 }
-                if ((ind >= 0) && (ind < journal.size()))
+                if (ind >= 0 && ind < journal.size())
                     break;
             }
             journal.deleteTask(ind);

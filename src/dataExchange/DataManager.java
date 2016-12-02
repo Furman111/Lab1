@@ -1,7 +1,7 @@
 package dataExchange;
 
 import data.Journal;
-import userInterface.ConsoleView;
+import ui.ConsoleView;
 
 import java.io.*;
 import java.util.Scanner;
